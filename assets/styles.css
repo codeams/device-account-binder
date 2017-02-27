@@ -1,0 +1,183 @@
+/**
+ * Device linker stylesheets
+ */
+
+
+/* Normalize */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+input,
+textarea {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  font-family: 'Myriad Pro', Arial, sans-serif;
+  color: #444;
+}
+
+
+/* Layout */
+
+body {
+  display: block;
+  width: 550px;
+  margin: 30px auto 0;
+}
+
+.title {
+  display: block;
+  text-align: center;
+}
+
+.title-1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.title-2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 12px 15px;
+  border: 2px solid #ccc;
+  outline: 0;
+  border-radius: 2px;
+}
+
+input[type="text"].mac-address {
+  font-family: Consolas, Menlo, monospace;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 2px solid #2F1F66;
+}
+
+input[type="button"] {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px 15px;
+  border: 0;
+  letter-spacing: 1px;
+  background-color: #2F1F66;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.login-form .error-message {
+  display: none;
+  margin: 25px 0;
+  text-align: center;
+  color: red;
+}
+
+.device-link-form {
+  display: none;
+}
+
+.devices {
+  display: block;
+  margin-top: 40px;
+}
+
+.device {
+  position: relative;
+  overflow: hidden;
+  padding: 50px 20px 20px;
+  margin-bottom: 30px;
+  background-color: #2F1F66;
+  border-radius: 2px;
+}
+
+.devices input[type="text"] {
+  border: 0;
+}
+
+.devices input[type="text"]:focus {
+  outline: 2px solid gold;
+}
+
+.device:last-of-type {
+  margin-bottom: 0;
+}
+
+.options {
+  width: 100%;
+  height: 22px;
+  position: absolute;
+  top: 14px;
+  left: 0;
+  padding-right: 20px;
+}
+
+.options .option-icon {
+  float: right;
+  width: 22px;
+  height: 22px;
+  margin-right: 12px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.options .save {
+  background-image: url('icons/save.svg');
+}
+
+.options .delete {
+  background-image: url('icons/delete.svg');
+}
+
+.device .error-message {
+  display: none;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #F44336;
+}
+
+#ui-locker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.9;
+}
+
+#ui-locker .loading {
+  width: 31px;
+  height: 31px;
+  margin: 40px auto 0;
+  background-image: url('icons/loading.gif');
+  background-repeat: none;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+.logout-link {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #2F1F66;
+}

@@ -3,31 +3,34 @@
   <head>
 
     <meta charset='utf-8'>
-    <title>Device-Account binder</title>
+    <title>Acceso a WIFI CCEI</title>
 
-    <link rel='stylesheet' href='styles.css'>
+    <link rel='stylesheet' href='assets/styles.css'>
 
   </head>
   <body>
 
-    <div class='link-device-form'>
-      <span class='title title-1'>Device-Account binder</span>
-      <span class='title title-2'>Bind a new device to your account:</span>
-      <input type='text' placeholder='Student ID' />
-      <input type='password' placeholder='Password' />
-      <input type='text' placeholder='First name' />
-      <input type='text' placeholder='Last name' />
-      <input type='text' placeholder='Device alias' />
-      <input type='text' placeholder='MAC address' />
-      <a href='#auth-error' class='button'>Bind</a>
+    <a class='logout-link' href='/index.html'>cerrar sesión</a>
+
+    <div id='ui-locker'>
+      &nbsp;
+      <div class='loading'></div>
     </div>
 
-    <div class='linked-devices'>
-      Enter your student ID to see your binded devices.
+    <span class='title title-1'>Registro de dispositivos</span>
+
+    <div class='login-form'>
+      <span class='title title-2'>Iniciar sesión</span>
+      <div class='error-message'></div>
+      <input type='text' id='user-input' placeholder='Matrícula'>
+      <input type='password' id='password-input' placeholder='Contraseña'>
+      <input type='button' value='Iniciar sesión'>
     </div>
 
-    <script src='http://localhost/libs/jquery.min.js'></script>
-    <script src='script.js'></script>
+    <div class='devices'></div>
+
+    <script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
+    <script src='assets/event-handler.js'></script>
 
   </body>
 </html>
